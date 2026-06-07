@@ -1,0 +1,673 @@
+/* --- VARIÁVEIS DE COR E FONTE --- */
+:root {
+  --bg-main: #05050f;
+  --bg-card: #11111a;
+  --bg-card-hover: #1a1a24;
+  --primary-blue: #3b48e8;
+  --primary-blue-hover: #2d38c2;
+  --glow-blue: rgba(59, 72, 232, 0.4);
+  --text-white: #ffffff;
+  --text-gray: #a1a1aa;
+  --border-color: #27272a;
+  --red-alert: #ef4444;
+
+  --font-main: "Inter", sans-serif;
+}
+
+/* --- RESET BÁSICO --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-white);
+  font-family: var(--font-main);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* --- UTILITÁRIOS --- */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.text-center {
+  text-align: center;
+}
+.mt-4 {
+  margin-top: 3rem;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+/* --- BOTÕES --- */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: var(--primary-blue);
+  color: var(--text-white);
+  border: none;
+  box-shadow: 0 0 20px var(--glow-blue);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-blue-hover);
+  box-shadow: 0 0 30px var(--glow-blue);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--text-white);
+  border: 1px solid var(--border-color);
+}
+
+.btn-outline:hover {
+  border-color: var(--text-white);
+}
+
+/* --- NAVEGAÇÃO --- */
+header {
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.logo i {
+  font-size: 1.5rem;
+}
+
+.nav-links a {
+  color: var(--text-gray);
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 0.9rem;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--text-white);
+}
+
+/* --- HERO SECTION --- */
+.hero {
+  position: relative;
+  padding: 80px 0 120px;
+  text-align: center;
+}
+
+.hero-bg-glow {
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 400px;
+  background: radial-gradient(circle, var(--glow-blue) 0%, transparent 70%);
+  z-index: -1;
+  filter: blur(50px);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(59, 72, 232, 0.1);
+  border: 1px solid var(--primary-blue);
+  color: #8b95ff;
+  padding: 6px 16px;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.hero h1 .highlight {
+  font-style: italic;
+  color: #8b95ff; /* Tom mais claro de azul */
+}
+
+.hero p {
+  color: var(--text-gray);
+  max-width: 600px;
+  margin: 0 auto 40px;
+  font-size: 1.1rem;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 80px;
+}
+
+/* --- CARDS BASE --- */
+.card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 30px;
+  text-align: left;
+  transition:
+    transform 0.3s,
+    background-color 0.3s;
+}
+
+.card:hover {
+  background-color: var(--bg-card-hover);
+  transform: translateY(-5px);
+}
+
+.card i {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: var(--text-white);
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: var(--text-gray);
+  font-size: 0.9rem;
+}
+
+/* --- COMPARAÇÃO --- */
+.comparison {
+  padding: 80px 0;
+}
+
+.icon-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.icon-red {
+  background: rgba(239, 68, 68, 0.1);
+  color: var(--red-alert);
+}
+.icon-blue {
+  background: rgba(59, 72, 232, 0.2);
+  color: var(--primary-blue);
+}
+
+.card.card-dark {
+  text-align: center;
+}
+.card.card-glow {
+  text-align: center;
+  background: linear-gradient(
+    180deg,
+    rgba(21, 21, 26, 1) 0%,
+    rgba(30, 35, 80, 1) 100%
+  );
+  border-color: var(--primary-blue);
+}
+
+.feature-list {
+  list-style: none;
+  margin-top: 20px;
+  text-align: left;
+}
+
+.feature-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+  color: var(--text-gray);
+}
+
+.list-red i {
+  color: var(--red-alert);
+  font-size: 1rem;
+  margin: 0;
+}
+.list-blue i {
+  color: #4ade80;
+  font-size: 1rem;
+  margin: 0;
+} /* Verde para check */
+
+/* --- PROCESSO (Fundo Azul) --- */
+.process {
+  background-color: var(--primary-blue);
+  padding: 80px 0;
+}
+
+.process h2 {
+  color: var(--text-white);
+}
+
+.card-step {
+  background-color: rgba(0, 0, 0, 0.2);
+  border: none;
+  text-align: left;
+}
+
+.card-step:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.step-number {
+  font-size: 3.5rem;
+  font-weight: 700;
+  opacity: 0.8;
+  margin-bottom: 10px;
+}
+
+/* --- SEÇÃO DE PREÇOS --- */
+.pricing {
+  padding: 80px 0;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.pricing-card {
+  position: relative;
+  padding: 30px 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Destaque "Mais Popular" (Premium) */
+.pricing-card.featured {
+  border: 2px solid var(--primary-blue);
+  padding-top: 45px;
+}
+
+.pricing-card.featured-secondary {
+  border: 1px solid rgba(59, 72, 232, 0.5);
+  padding-top: 45px;
+}
+
+.featured-banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--primary-blue);
+  color: var(--text-white);
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 6px 0;
+  border-radius: 14px 14px 0 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.banner-light {
+  background-color: rgba(59, 72, 232, 0.2);
+  color: #8b95ff;
+}
+
+/* Badges e Textos do Card */
+.discount-badge {
+  display: inline-block;
+  background: rgba(59, 72, 232, 0.15);
+  color: #8b95ff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  align-self: flex-start;
+}
+
+.plan-desc {
+  font-size: 0.85rem;
+  color: var(--text-gray);
+  margin-bottom: 20px;
+  min-height: 40px; /* Alinha os blocos de preço visualmente */
+}
+
+/* Área do Preço */
+.price-box {
+  margin-bottom: 25px;
+}
+
+.old-price {
+  font-size: 0.9rem;
+  color: var(--text-gray);
+  text-decoration: line-through;
+  display: block;
+}
+
+.current-price {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-white);
+  line-height: 1;
+  margin: 5px 0;
+}
+
+.current-price span {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--text-gray);
+}
+
+.bonus-months {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-white);
+}
+
+/* Botões e Divisórias */
+.btn-full {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.fine-print {
+  font-size: 0.7rem;
+  color: var(--text-gray);
+  text-align: center;
+  line-height: 1.4;
+}
+
+.divider {
+  border: 0;
+  height: 1px;
+  background-color: var(--border-color);
+  margin: 25px 0;
+}
+
+/* Listas de Funcionalidades */
+.feature-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin: 20px 0 15px;
+}
+
+.pricing-features li {
+  font-size: 0.85rem;
+  align-items: flex-start;
+}
+
+.pricing-features i {
+  font-size: 1.1rem;
+  color: var(--text-gray);
+  margin-top: 2px;
+}
+
+.list-blue li {
+  font-size: 0.85rem;
+}
+
+/* --- FORMAS DE PAGAMENTO --- */
+.payment-methods-banner {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 30px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.payment-methods-banner p {
+  color: var(--text-gray);
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+.payment-methods-banner strong {
+  color: #009ee3; /* Azul oficial do Mercado Pago */
+}
+
+.payment-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.pay-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-color);
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  color: var(--text-white);
+  transition: background 0.3s;
+}
+
+.pay-badge:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.pay-badge i {
+  font-size: 1.5rem;
+  color: var(--primary-blue);
+}
+
+/* --- FAQ SECTION --- */
+.faq {
+  padding: 80px 0;
+}
+
+.faq-grid {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.faq-item {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: background-color 0.3s ease;
+}
+
+.faq-item:hover {
+  background-color: var(--bg-card-hover);
+}
+
+.faq-item summary {
+  padding: 20px 25px;
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--text-white);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none; /* Remove a seta padrão em alguns navegadores */
+}
+
+/* Esconde a seta padrão do elemento details no Chrome/Safari antigos */
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary i {
+  color: var(--primary-blue);
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+/* Animação para girar o ícone de seta quando a pergunta for aberta */
+.faq-item[open] summary i {
+  transform: rotate(180deg);
+}
+
+.faq-content {
+  padding: 0 25px 20px 25px;
+  color: var(--text-gray);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Cria uma linha divisória entre a pergunta e a resposta */
+.faq-content p {
+  border-top: 1px solid var(--border-color);
+  padding-top: 20px;
+  margin-top: 5px;
+}
+
+/* --- CONTATO --- */
+.contact {
+  padding: 80px 0 120px;
+}
+
+.contact-grid {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+  padding: 40px 30px;
+}
+
+.contact-card h3 {
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.contact-card p {
+  margin-bottom: 45px;
+  flex-grow: 1; /* Faz com que os botões fiquem alinhados no fundo se o texto tiver tamanhos diferentes */
+}
+
+/* Ícone cinza específico para o e-mail */
+.icon-gray {
+  background: rgba(161, 161, 170, 0.1);
+  color: var(--text-gray);
+}
+
+.icon-gray i {
+  color: var(--text-white);
+}
+
+/* Espaçamento do botão */
+.mt-btn {
+  margin-top: auto;
+}
+
+/* Destaque sutil no hover do card de WhatsApp */
+.whatsapp-card:hover {
+  border-color: var(--primary-blue);
+  box-shadow: 0 10px 30px rgba(59, 72, 232, 0.1);
+}
+
+/* --- RESPONSIVIDADE ADICIONAL --- */
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr; /* Coloca um card embaixo do outro no celular */
+  }
+}
+
+/* Responsividade da Tabela de Preços */
+@media (max-width: 1024px) {
+  .pricing-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+  .plan-desc {
+    min-height: auto;
+  }
+}
+
+/* --- RODAPÉ --- */
+footer {
+  padding: 40px 0;
+  border-top: 1px solid var(--border-color);
+  color: var(--text-gray);
+  font-size: 0.9rem;
+}
+
+/* --- RESPONSIVIDADE (Celular) --- */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  } /* Esconde menu no mobile para simplificar */
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .grid-2,
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+}
