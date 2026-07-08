@@ -4,94 +4,184 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Next Tab - Sites Profissionais</title>
+    <link rel="icon" type="image/png" href="./img/logoNextTab.png" />
     <link rel="stylesheet" href="home.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
   </head>
   <body>
+    <!-- CABEÇALHO (NOVO VISUAL DA IMAGEM) -->
     <header>
       <div class="container nav-container">
         <div class="logo">
           <i class="ph-bold ph-hexagon"></i>
-          <span>Next tab</span>
         </div>
-        <nav class="nav-links">
+
+        <nav class="nav-pill">
           <a href="#inicio">Início</a>
-          <a href="#solucao">Solução</a>
+          <a href="#solucao">Nossa Solução</a>
+          <a href="#portfolio">Portfólio</a>
           <a href="#precos">Preços</a>
-          <a href="#faq">FAQ</a>
-          <a href="#contato">Contato</a>
+          <a href="#planos">Planos Mensais</a>
+          <a href="#faq">Dúvidas</a>
         </nav>
+
         <a
           href="https://api.whatsapp.com/send/?phone=5549998316596&"
-          class="btn btn-outline"
-          >Começar Agora</a
+          class="btn btn-outline nav-btn"
+          >Fale conosco</a
         >
       </div>
     </header>
 
+    <!-- HERO SECTION (NOVO VISUAL DA IMAGEM) -->
     <section class="hero" id="inicio">
-      <div class="hero-bg-glow"></div>
       <div class="container hero-content">
-        <div class="badge">
-          <i class="ph-fill ph-sparkle"></i> Vendas Aumentadas
+        <div class="badge-status">
+          <span class="pulse-dot"></span> Restam 4 vagas
         </div>
+
         <h1>
-          Sites Profissionais que<br />Geram
-          <span class="highlight">Clientes de Verdade</span>
+          Conquiste a <span class="highlight-blue">confiança</span> de<br />quem
+          visita sua empresa
         </h1>
-        <p>
-          Para dentistas, advogados e consultórios que querem parar de depender
-          só do Instagram.
+
+        <p class="hero-subtitle">
+          Criamos sites profissionais que fortalecem sua credibilidade e
+          transformam visitantes<br />em novos clientes.
         </p>
 
         <div class="hero-buttons">
-          <a href="#" class="btn btn-outline">Ver Exemplos</a>
+          <a href="#solucao" class="btn btn-outline">Ver mais</a>
           <a
             href="https://api.whatsapp.com/send/?phone=5549998316596&"
             class="btn btn-primary"
-            >Começar Agora</a
+            >Quero minha Landing Page</a
           >
-        </div>
-
-        <div class="grid-3 hero-cards">
-          <div class="card">
-            <i class="ph ph-rocket-launch"></i>
-            <h3>Entrega em 2 dias</h3>
-            <p>
-              Seu site no ar, rápido e sem complicações. Rapidez para gerar
-              clientes.
-            </p>
-          </div>
-          <div class="card">
-            <i class="ph ph-cloud"></i>
-            <h3>Hospedagem Inclusa</h3>
-            <p>Incluso em nossos planos, sem mensalidade extra por 1 ano.</p>
-          </div>
-          <div class="card">
-            <i class="ph ph-users"></i>
-            <h3>Feito para converter</h3>
-            <p>
-              Estratégia focada no seu cliente final para agendar via WhatsApp.
-            </p>
-          </div>
         </div>
       </div>
     </section>
 
+    <!-- CARDS SOBREPOSTOS (NOVO VISUAL DA IMAGEM) -->
+    <div class="hero-bottom-wrapper">
+      <section class="features-overlap">
+        <div class="container">
+          <div class="grid-3">
+            <div class="card card-glass text-center">
+              <i class="ph ph-rocket-launch"></i>
+              <h3>Cuidamos de tudo</h3>
+              <p>
+                Você não precisa se preocupar com domínio, hospedagem ou
+                configurações técnicas. Nós cuidamos de toda a parte digital.
+              </p>
+            </div>
+            <div class="card card-glass text-center">
+              <i class="ph ph-users-three"></i>
+              <h3>Atendimento próximo</h3>
+              <p>
+                Entendemos seu negócio antes de criar seu site, garantindo uma
+                solução alinhada aos seus objetivos.
+              </p>
+            </div>
+            <div class="card card-glass text-center">
+              <i class="ph ph-user"></i>
+              <h3>Sempre atualizado</h3>
+              <p>
+                Seu site não fica abandonado. Após a entrega, ficamos
+                disponíveis para ajustes e melhorias sempre que necessário.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- NOSSO PRODUTO / BENTO GRID (NOVO VISUAL DA IMAGEM) -->
+    <section class="product-section" id="solucao">
+      <div class="container text-center">
+        <div class="badge-outline">Nosso Produto</div>
+
+        <h2 class="section-title">Landing Page Completa</h2>
+        <p class="section-subtitle">
+          Criamos landing pages rápidas, modernas e focadas em conversão para
+          fazer seu<br />
+          negócio parecer profissional, aumentar credibilidade e gerar leads
+          consistentes —<br />
+          mesmo que você esteja começando agora.
+        </p>
+
+        <div class="bento-grid mt-4">
+          <!-- Linha Superior (3 cards) -->
+          <div class="card card-glass text-left">
+            <i class="ph ph-rocket-launch"></i>
+            <h3>Pronto em 1 a 2 semanas</h3>
+            <p>
+              Após você aprovar o design, seu site está no ar. Rápido e sem
+              enrolação.
+            </p>
+          </div>
+          <div class="card card-glass text-left">
+            <i class="ph ph-cloud"></i>
+            <h3>Hospedagem incluída</h3>
+            <p>
+              Você não se preocupa com nada. Possuímos hospedagem no preço de
+              nossa mensalidade.
+            </p>
+          </div>
+          <div class="card card-glass text-left">
+            <i class="ph ph-phone-call"></i>
+            <h3>Clientes te encontram 24/7</h3>
+            <p>
+              WhatsApp integrado, formulário otimizado, telefone em destaque.
+              Cada visita vira oportunidade de fechar negócio.
+            </p>
+          </div>
+
+          <!-- Linha Inferior (2 cards) -->
+          <div class="card card-glass bento-span-1 text-left">
+            <i class="ph ph-handshake"></i>
+            <h3>Sem complicação técnica</h3>
+            <p>
+              Você só envia fotos e informações. Eu escrevo textos, configuro
+              tudo e entrego funcionando.
+            </p>
+          </div>
+          <div class="card card-glass bento-span-2 bento-glow text-left">
+            <i class="ph ph-palette"></i>
+            <h3>Design que impressiona</h3>
+            <p>
+              Não é só bonito. Design moderno, responsivo e pensado para
+              converter. Seu negócio parece estabelecido, mesmo que esteja
+              começando.
+            </p>
+          </div>
+        </div>
+
+        <div class="cta-bottom mt-4">
+          <a
+            href="https://api.whatsapp.com/send/?phone=5549998316596&"
+            class="btn btn-primary btn-large"
+            >Quero Parar de Perder Clientes</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÕES ORIGINAIS MANTIDAS E ADAPTADAS AO NOVO VISUAL -->
+
     <section class="comparison" id="problema">
       <div class="container text-center">
         <h2>Você investe em marketing mas...</h2>
-        <p>
+        <p style="color: var(--text-gray)">
           A forma como seu site foi construído pode estar, na verdade, afastando
           as pessoas que deveriam comprar de você.
         </p>
 
         <div class="grid-2 mt-4">
-          <div class="card card-dark">
+          <div class="card card-glass card-dark">
             <div class="icon-circle icon-red">
               <i class="ph ph-x"></i>
             </div>
@@ -106,7 +196,7 @@
             </ul>
           </div>
 
-          <div class="card card-glow">
+          <div class="card card-glass card-glow text-center">
             <div class="icon-circle icon-blue">
               <i class="ph-bold ph-hexagon"></i>
             </div>
@@ -124,34 +214,48 @@
             </ul>
           </div>
         </div>
-
-        <a
-          href="https://api.whatsapp.com/send/?phone=5549998316596&"
-          class="btn btn-primary mt-4"
-          >Quero ter uma presença online</a
-        >
       </div>
     </section>
 
-    <section class="process" id="solucao">
+    <section class="process" id="processo">
       <div class="container text-center">
         <h2>Simples, Rápido & Sem complicação.</h2>
 
-        <div class="grid-3 mt-4">
+        <div class="grid-4 mt-4">
           <div class="card card-step">
             <div class="step-number">01</div>
-            <h3>Você envia fotos e informações</h3>
-            <p>Um formulário simples de preencher para entender seu negócio.</p>
+            <h3>Agendamento de reunião</h3>
+            <p>
+              Fazemos uma reunião de alinhamento, onde apresentamos nosso
+              processo e o que possuímos de benefícios para seu negócio.
+            </p>
           </div>
+
           <div class="card card-step">
             <div class="step-number">02</div>
-            <h3>Criamos o seu design em 2 dias</h3>
-            <p>Nossa equipe entra em ação e desenvolve tudo.</p>
+            <h3>Criamos o design para o seu negócio</h3>
+            <p>
+              Desenvolvemos o site com base em nossa reunião e no material
+              enviado por você, como fotos e logos.
+            </p>
           </div>
+
           <div class="card card-step">
             <div class="step-number">03</div>
-            <h3>Site pronto em + 3 dias</h3>
-            <p>Aprovado o design, colocamos no ar e otimizamos.</p>
+            <h3>Você aprova o visual</h3>
+            <p>
+              Você aprova todo design antes de desenvolvermos o código. Contamos
+              com 2 revisões incluídas até ficar como você imagina.
+            </p>
+          </div>
+
+          <div class="card card-step">
+            <div class="step-number">04</div>
+            <h3>Site pronto em + 5 dias</h3>
+            <p>
+              Após a aprovação seu site está no ar em 5 dias. Também contamos
+              com hospedagem e domínio próprio para seu site.
+            </p>
           </div>
         </div>
       </div>
@@ -167,11 +271,11 @@
         </div>
 
         <div class="pricing-grid mt-4">
-          <div class="card pricing-card">
+          <div class="card card-glass pricing-card">
             <span class="discount-badge">Condição Especial</span>
             <p class="plan-desc">Hospedagem no 1º Ano</p>
             <div class="price-box">
-              <div class="current-price">R$ 99<span>/ano</span></div>
+              <div class="current-price">R$ 99<span>/mês</span></div>
             </div>
             <a
               href="https://api.whatsapp.com/send/?phone=5549998316596&"
@@ -185,7 +289,7 @@
             </p>
           </div>
 
-          <div class="card pricing-card featured">
+          <div class="card card-glass pricing-card featured">
             <div class="featured-banner">Projeto Principal</div>
             <p class="plan-desc">Criação de Landing Page Completa</p>
             <div class="price-box">
@@ -204,10 +308,10 @@
             </ul>
           </div>
 
-          <div class="card pricing-card">
+          <div class="card card-glass pricing-card">
             <p class="plan-desc">Pacote de Manutenção</p>
             <div class="price-box">
-              <div class="current-price">R$ 189<span>/recorrente</span></div>
+              <div class="current-price">R$ 189<span>/mês</span></div>
             </div>
             <a
               href="https://api.whatsapp.com/send/?phone=5549998316596&"
@@ -222,7 +326,7 @@
             </ul>
           </div>
 
-          <div class="card pricing-card">
+          <div class="card card-glass pricing-card">
             <p class="plan-desc">Serviço Avulso</p>
             <div class="price-box">
               <div class="current-price">R$ 120<span>/hora</span></div>
@@ -262,7 +366,13 @@
       <div class="container">
         <div class="text-center">
           <h2>Perguntas Frequentes</h2>
-          <p style="color: var(--text-gray); margin-top: 10px">
+          <p
+            style="
+              color: var(--text-gray);
+              margin-top: 10px;
+              margin-bottom: 20px;
+            "
+          >
             Tire suas dúvidas e sinta-se seguro para dar o próximo passo.
           </p>
         </div>
@@ -282,7 +392,6 @@
               </p>
             </div>
           </details>
-
           <details class="faq-item">
             <summary>
               Eu preciso pagar alguma mensalidade?
@@ -297,7 +406,6 @@
               </p>
             </div>
           </details>
-
           <details class="faq-item">
             <summary>
               Em quanto tempo meu site estará no ar?
@@ -313,7 +421,6 @@
               </p>
             </div>
           </details>
-
           <details class="faq-item">
             <summary>
               Quais são as formas de pagamento aceitas?
@@ -327,7 +434,6 @@
               </p>
             </div>
           </details>
-
           <details class="faq-item">
             <summary>
               Vocês criam os textos e as imagens do site?
@@ -350,13 +456,15 @@
     <section class="contact" id="contato">
       <div class="container text-center">
         <h2>Fale com a nossa equipe</h2>
-        <p style="color: var(--text-gray); margin-top: 10px">
+        <p
+          style="color: var(--text-gray); margin-top: 10px; margin-bottom: 20px"
+        >
           Pronto para ter uma presença online profissional? Escolha como prefere
           falar com a gente.
         </p>
 
         <div class="grid-2 mt-4 contact-grid">
-          <div class="card contact-card whatsapp-card">
+          <div class="card card-glass contact-card whatsapp-card">
             <div class="icon-circle icon-blue">
               <i class="ph ph-whatsapp-logo"></i>
             </div>
@@ -369,12 +477,11 @@
               href="https://api.whatsapp.com/send/?phone=5549998316596&"
               target="_blank"
               class="btn btn-primary btn-full mt-btn"
+              >Iniciar conversa</a
             >
-              Iniciar conversa
-            </a>
           </div>
 
-          <div class="card contact-card email-card">
+          <div class="card card-glass contact-card email-card">
             <div class="icon-circle icon-gray">
               <i class="ph ph-envelope-simple"></i>
             </div>
@@ -384,11 +491,10 @@
               Mande um e-mail e responderemos em breve.
             </p>
             <a
-              href="mailto:rodriguesbrunor01@gmail.com"
+              href="mailto:contato@nexttab.com.br?subject=Novo Projeto de Site"
               class="btn btn-outline btn-full mt-btn"
+              >Enviar e-mail</a
             >
-              Enviar e-mail
-            </a>
           </div>
         </div>
       </div>
@@ -398,16 +504,18 @@
       <div class="container">
         <div class="footer-grid">
           <div class="footer-brand">
-            <div class="logo">
-              <i class="ph-bold ph-hexagon"></i>
-              <span>Next tab</span>
+            <div
+              class="logo"
+              style="display: flex; align-items: center; gap: 8px"
+            >
+              <i class="ph-bold ph-hexagon" style="font-size: 1.5rem"></i>
+              <span style="font-weight: 700; font-size: 1.2rem">Next tab</span>
             </div>
-            <p>
+            <p style="margin-top: 15px">
               Sites profissionais que geram clientes de verdade para o seu
               negócio.
             </p>
           </div>
-
           <div class="footer-links">
             <h4>Navegação</h4>
             <ul>
@@ -418,7 +526,6 @@
             </ul>
           </div>
         </div>
-
         <div class="footer-bottom">
           <p>&copy; 2026 Next Tab. Todos os direitos reservados.</p>
         </div>
