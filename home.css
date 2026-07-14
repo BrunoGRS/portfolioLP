@@ -166,9 +166,9 @@ header {
   padding: 180px 0 100px;
   text-align: center;
   background: radial-gradient(
-    ellipse at top,
-    rgba(20, 20, 30, 1) 0%,
-    var(--bg-main) 80%
+    ellipse 1400px 420px at 50% 100%,
+    #34376f 0%,
+    var(--bg-main) 75%
   );
 }
 
@@ -220,7 +220,179 @@ header {
   gap: 15px;
 }
 
-/* --- CARDS BASE E GLASSMORPHISM --- */
+/* --- DESIGN SECTION (NOVO DESIGN IGUAL À IMAGEM) --- */
+
+/* Wrapper com brilho roxo concentrado bem na costura com o hero, que funde rápido para o preto (fundo preto nas laterais e embaixo) */
+.design-section-wrapper {
+  background: radial-gradient(
+    ellipse 1400px 420px at 50% 0%,
+    #34376f 0%,
+    var(--bg-main) 75%
+  );
+  padding-top: 40px;
+}
+
+/* CARDS DO TOPO (OVERLAP) */
+.features-overlap {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 60px;
+}
+
+/* Alinha os cards pela base para o card do meio "flutuar" mais alto, como no esboço */
+.features-overlap .grid-3 {
+  align-items: end;
+}
+
+.card-feature {
+  background-color: #0c0c10;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 44px;
+  padding: 35px 30px;
+  transition:
+    transform 0.3s,
+    border-color 0.3s;
+}
+
+/* Cards na diagonal, tipo "leque" - o do meio fica reto pois já se destaca por ser mais alto */
+.card-feature:nth-child(1) {
+  transform: rotate(-5deg);
+}
+
+.card-feature:nth-child(3) {
+  transform: rotate(5deg);
+}
+
+/* Card central mais alto, se destacando acima dos demais */
+.card-feature:nth-child(2) {
+  padding-top: 65px;
+}
+
+.card-feature:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+  transform: rotate(0deg) translateY(-5px);
+}
+
+.card-feature i {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+  color: var(--text-white);
+  display: inline-block;
+}
+
+.card-feature h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.card-feature p {
+  color: var(--text-gray);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* --- SEÇÃO DE PRODUTO (Grade Bento) --- */
+.product-section {
+  padding: 20px 0 80px;
+}
+
+.badge-outline {
+  display: inline-block;
+  border: 1px solid var(--border-color);
+  color: var(--text-gray);
+  padding: 6px 20px;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  margin-bottom: 25px;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.section-subtitle {
+  color: var(--text-gray);
+  font-size: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.bento-span-1 {
+  grid-column: span 1;
+}
+.bento-span-2 {
+  grid-column: span 2;
+}
+
+/* Card Escuro Bento */
+.card-bento-dark {
+  background-color: #111115;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 30px;
+  transition:
+    transform 0.3s,
+    border-color 0.3s;
+}
+
+.card-bento-dark:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-5px);
+}
+
+/* Card Degradê Bento */
+.card-bento-gradient {
+  background: linear-gradient(180deg, #1f204d 0%, var(--bg-main) 100%);
+  border: 1px solid rgba(79, 70, 229, 0.2);
+  border-radius: 20px;
+  padding: 30px;
+  transition:
+    transform 0.3s,
+    border-color 0.3s;
+}
+
+.card-bento-gradient:hover {
+  border-color: rgba(79, 70, 229, 0.4);
+  transform: translateY(-5px);
+}
+
+/* Tipografia Base dos Cards Bento */
+.card-bento-dark i,
+.card-bento-gradient i {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: var(--text-white);
+  display: inline-block;
+}
+
+.card-bento-dark h3,
+.card-bento-gradient h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.card-bento-dark p,
+.card-bento-gradient p {
+  color: var(--text-gray);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.cta-bottom {
+  margin-top: 50px;
+}
+
+/* --- CARDS BASE E GLASSMORPHISM (Mantido para outras sessões) --- */
 .card-glass {
   background: linear-gradient(
     180deg,
@@ -260,88 +432,7 @@ header {
   line-height: 1.5;
 }
 
-/* --- LINHAS HORIZONTAIS DE BRILHO (NOVO) --- */
-.hero-bottom-wrapper {
-  position: relative;
-  width: 100%;
-}
-
-.glowing-line-blue {
-  position: absolute;
-  top: 40px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: var(--primary-blue);
-  box-shadow: 0 0 25px 3px rgba(79, 70, 229, 0.8);
-  z-index: 1;
-}
-
-.glowing-line-orange {
-  width: 100%;
-  height: 1px;
-  background: rgba(234, 88, 12, 0.2);
-  margin: 70px 0;
-}
-
-/* --- SEÇÃO DE PRODUTO (Grade Bento) --- */
-.product-section {
-  padding: 20px 0 80px;
-}
-
-.badge-outline {
-  display: inline-block;
-  border: 1px solid var(--border-color);
-  color: var(--text-gray);
-  padding: 6px 16px;
-  border-radius: 50px;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 25px;
-}
-
-.section-title {
-  font-size: 2.5rem;
-  font-weight: 600;
-  margin-bottom: 15px;
-}
-
-.section-subtitle {
-  color: var(--text-gray);
-  font-size: 1rem;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.bento-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-}
-
-.bento-span-1 {
-  grid-column: span 1;
-}
-.bento-span-2 {
-  grid-column: span 2;
-}
-
-.bento-glow {
-  position: relative;
-  overflow: hidden;
-  background: linear-gradient(
-    135deg,
-    rgba(30, 30, 36, 0.6) 40%,
-    rgba(79, 70, 229, 0.15) 100%
-  );
-}
-
-.cta-bottom {
-  margin-top: 50px;
-}
-
-/* --- COMPARAÇÃO E PROCESSO (ORIGINAIS ADAPTADAS) --- */
+/* --- COMPARAÇÃO E PROCESSO --- */
 .comparison h2,
 .process h2 {
   font-size: 2rem;
@@ -398,11 +489,11 @@ header {
   color: #4ade80;
   font-size: 1rem;
   margin: 0;
-} /* Verde p/ check */
+}
 
-/* --- PROCESSO (Layout da Imagem) --- */
+/* --- PROCESSO --- */
 .process {
-  background-color: var(--primary-blue); /* Fundo azul escuro */
+  background-color: var(--primary-blue);
   padding: 80px 0;
 }
 
@@ -413,7 +504,7 @@ header {
 }
 
 .card-step {
-  background-color: #111116; /* Fundo bem escuro/sólido como na imagem */
+  background-color: #111116;
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 12px;
   padding: 40px 25px;
@@ -429,7 +520,7 @@ header {
 .step-number {
   font-size: 4.5rem;
   font-weight: 700;
-  font-style: italic; /* Número deitado como na imagem */
+  font-style: italic;
   color: var(--text-white);
   line-height: 1;
   margin-bottom: 20px;
@@ -714,19 +805,13 @@ footer h4 {
   .nav-pill,
   .nav-btn {
     display: none;
-  } /* Mobile Menu simplificado */
+  }
   .hero h1 {
     font-size: 2.5rem;
   }
   .grid-2,
-  .grid-3,
-  .bento-grid,
   .pricing-grid {
     grid-template-columns: 1fr;
-  }
-  .bento-span-1,
-  .bento-span-2 {
-    grid-column: span 1;
   }
   .hero-buttons {
     flex-direction: column;
@@ -737,5 +822,88 @@ footer h4 {
   }
   .footer-brand p {
     margin: 15px auto;
+  }
+}
+
+/* --- CARDS COMPACTOS EM GRADE NO MOBILE (IGUAL AO ESBOÇO) --- */
+@media (max-width: 768px) {
+  /* Cards do topo (Cuidamos de tudo / Atendimento / Sempre atualizado) */
+  .features-overlap .grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.6rem;
+  }
+
+  .features-overlap .card-feature {
+    padding: 16px 10px;
+    border-radius: 22px;
+  }
+
+  .features-overlap .card-feature:nth-child(2) {
+    padding-top: 34px;
+  }
+
+  .features-overlap .card-feature i {
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+  }
+
+  .features-overlap .card-feature h3 {
+    font-size: 0.75rem;
+    margin-bottom: 6px;
+    line-height: 1.25;
+  }
+
+  .features-overlap .card-feature p {
+    font-size: 0.62rem;
+    line-height: 1.35;
+  }
+
+  /* Seção "Nosso Produto" */
+  .product-section .section-title {
+    font-size: 1.7rem;
+  }
+
+  .product-section .section-subtitle {
+    font-size: 0.85rem;
+  }
+
+  /* Bento grid mantém disposição em grade, só reduz tamanho */
+  .bento-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.6rem;
+  }
+
+  .bento-span-2 {
+    grid-column: span 2;
+  }
+
+  .card-bento-dark,
+  .card-bento-gradient {
+    padding: 14px 12px;
+    border-radius: 14px;
+  }
+
+  .card-bento-dark i,
+  .card-bento-gradient i {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+  }
+
+  .card-bento-dark h3,
+  .card-bento-gradient h3 {
+    font-size: 0.72rem;
+    margin-bottom: 6px;
+    line-height: 1.25;
+  }
+
+  .card-bento-dark p,
+  .card-bento-gradient p {
+    font-size: 0.6rem;
+    line-height: 1.35;
+  }
+
+  .cta-bottom .btn-large {
+    padding: 12px 24px;
+    font-size: 0.8rem;
   }
 }
