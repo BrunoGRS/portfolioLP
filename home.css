@@ -542,7 +542,126 @@ header {
 /* --- PREÇOS --- */
 .pricing {
   padding: 80px 0;
+  position: relative;
+  background: radial-gradient(
+    ellipse 900px 480px at 50% 48%,
+    #23244d 0%,
+    var(--bg-main) 70%
+  );
 }
+
+.pricing h2 {
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+
+.pricing-offer-card {
+  max-width: 950px;
+  margin: 0 auto;
+  background-color: #0b0b16;
+  border: 1px solid rgba(79, 70, 229, 0.25);
+  border-radius: 28px;
+  padding: 45px 50px;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 50px;
+  box-shadow: 0 0 60px rgba(79, 70, 229, 0.12);
+}
+
+.offer-badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-gray);
+  font-size: 0.8rem;
+  padding: 6px 16px;
+  border-radius: 50px;
+  margin-bottom: 20px;
+}
+
+.offer-old-price {
+  color: var(--text-gray);
+  text-decoration: line-through;
+  font-size: 0.9rem;
+  margin-bottom: 2px;
+}
+
+.offer-price-box {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.offer-price-currency {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-white);
+}
+
+.offer-price-value {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--text-white);
+  line-height: 1;
+}
+
+.offer-price-note {
+  font-size: 0.85rem;
+  color: var(--text-gray);
+}
+
+.offer-bonus {
+  color: #a5b4fc;
+  font-size: 0.85rem;
+  margin-bottom: 25px;
+}
+
+.pricing-offer-right h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 18px;
+  color: var(--text-white);
+}
+
+.offer-feature-list {
+  list-style: none;
+  text-align: left;
+}
+
+.offer-feature-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: var(--text-gray);
+  font-size: 0.9rem;
+  margin-bottom: 14px;
+  line-height: 1.4;
+}
+
+.offer-feature-list i {
+  color: #22c55e;
+  font-size: 1rem;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.pricing-doubt-link {
+  margin-top: 35px;
+}
+
+.pricing-doubt-link a {
+  color: var(--text-gray);
+  font-size: 0.9rem;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.3s;
+}
+
+.pricing-doubt-link a:hover {
+  color: var(--text-white);
+}
+
 .pricing-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -652,14 +771,34 @@ header {
 
 /* --- FAQ --- */
 .faq {
-  padding: 40px 0 80px;
+  padding: 60px 0;
 }
-.faq-grid {
-  max-width: 800px;
-  margin: 0 auto;
+.faq-flex {
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+}
+.faq-intro {
+  flex: 0 0 300px;
+  text-align: left;
+}
+.faq-intro h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 18px;
+}
+.faq-intro p {
+  color: var(--text-gray);
+  font-size: 0.9rem;
+  margin-bottom: 25px;
+}
+.faq-accordion {
+  flex: 1;
+  min-width: 0;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 12px;
 }
 .faq-item {
   background: rgba(255, 255, 255, 0.02);
@@ -688,6 +827,8 @@ header {
   color: var(--primary-blue);
   font-size: 1.2rem;
   transition: transform 0.3s;
+  flex-shrink: 0;
+  margin-left: 15px;
 }
 .faq-item[open] summary i {
   transform: rotate(180deg);
@@ -703,30 +844,52 @@ header {
   margin-top: 5px;
 }
 
-/* --- CONTATO --- */
-.contact {
-  padding: 40px 0 120px;
+/* --- CTA FINAL (banner azul) --- */
+.cta-banner {
+  position: relative;
+  overflow: hidden;
+  padding: 90px 0;
+  background: linear-gradient(180deg, #242c81 0%, #14194b 100%);
+  text-align: center;
 }
-.contact-grid {
-  max-width: 800px;
-  margin: 0 auto;
+.cta-banner h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--text-white);
+  margin-bottom: 15px;
 }
-.contact-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 40px 30px;
+.cta-banner .container > p {
+  color: rgba(255, 255, 255, 0.75);
+  max-width: 480px;
+  margin: 0 auto 30px;
 }
-.contact-card p {
-  margin-bottom: 40px;
-  flex-grow: 1;
+.cta-schedule {
+  margin-top: 22px;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.85rem;
 }
-.icon-gray {
-  background: rgba(255, 255, 255, 0.05);
-  color: var(--text-gray);
+.cta-decor {
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  pointer-events: none;
 }
-.mt-btn {
-  margin-top: auto;
+.cta-decor::before {
+  content: "";
+  position: absolute;
+  inset: 45px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+.cta-decor-left {
+  left: -180px;
+  bottom: -220px;
+}
+.cta-decor-right {
+  right: -180px;
+  bottom: -220px;
 }
 
 /* --- FOOTER --- */
@@ -812,6 +975,28 @@ footer h4 {
   .grid-2,
   .pricing-grid {
     grid-template-columns: 1fr;
+  }
+  .pricing-offer-card {
+    grid-template-columns: 1fr;
+    padding: 30px 24px;
+    gap: 30px;
+  }
+  .pricing h2 {
+    font-size: 1.6rem;
+  }
+  .faq-flex {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .faq-intro {
+    flex: none;
+    text-align: center;
+  }
+  .faq-intro h2 {
+    font-size: 1.6rem;
+  }
+  .cta-banner h2 {
+    font-size: 1.6rem;
   }
   .hero-buttons {
     flex-direction: column;
