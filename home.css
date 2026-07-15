@@ -80,6 +80,7 @@ body {
   text-decoration: none;
   transition: all 0.3s ease;
   cursor: pointer;
+  margin-bottom: 16px;
 }
 
 .btn-primary {
@@ -864,7 +865,7 @@ header {
   margin: 0 auto 30px;
 }
 .cta-schedule {
-  margin-top: 22px;
+  margin-top: 25px;
   color: rgba(255, 255, 255, 0.55);
   font-size: 0.85rem;
 }
