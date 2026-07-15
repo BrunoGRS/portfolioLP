@@ -272,7 +272,9 @@ header {
 .card-feature:nth-child(2) {
   position: relative;
   z-index: 10; /* Garante que fique fixo por cima por padrão */
-  margin-bottom: 20px; /* Eleva o card central um pouco mais, igual ao design */
+  margin-bottom: 20px;
+  margin-right: 20px;
+  margin-left: 20px;
 }
 .card-feature:nth-child(2):hover {
   transform: translateY(-10px);
@@ -357,7 +359,6 @@ header {
 /* Card Escuro Bento */
 .card-bento-dark {
   background-color: #111115;
-  border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 20px;
   padding: 30px;
   transition:
@@ -373,9 +374,8 @@ header {
 /* Card Degradê Bento */
 .card-bento-gradient {
   background: linear-gradient(180deg, #1f204d 0%, var(--bg-main) 100%);
-  border: 1px solid rgba(79, 70, 229, 0.2);
-  border-radius: 20px;
   padding: 30px;
+  border-radius: 20px;
   transition:
     transform 0.3s,
     border-color 0.3s;
