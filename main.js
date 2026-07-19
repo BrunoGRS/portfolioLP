@@ -140,3 +140,16 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+// --- BOTÃO VOLTAR AO TOPO ---
+const backToTopBtn = document.querySelector(".btn-back-to-top");
+
+window.addEventListener("scroll", () => {
+  // Se a rolagem passar de 300 pixels, mostra o botão
+  if (window.scrollY > 300) {
+    backToTopBtn.classList.add("show");
+  } else {
+    // Caso contrário, esconde
+    backToTopBtn.classList.remove("show");
+  }
+});
