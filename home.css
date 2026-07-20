@@ -830,34 +830,43 @@ header {
   }
 }
 /* --- FAQ --- */
+/* --- FAQ --- */
 .faq {
-  padding: 60px 0;
+  padding: 80px 0;
   background: radial-gradient(
     ellipse 1400px 420px at 50% 0%,
     #34376f 0%,
     var(--bg-main) 60%
   );
 }
+
 .faq-flex {
   display: flex;
-  gap: 60px;
+  gap: 80px; /* Aumentado o respiro entre colunas */
   align-items: flex-start;
 }
+
 .faq-intro {
-  flex: 0 0 300px;
+  flex: 0 0 450px; /* Aumentado para a largura ficar igual à imagem */
   text-align: left;
 }
+
 .faq-intro h2 {
-  font-size: 2rem;
+  font-size: 2.5rem; /* Letra maior para destacar */
   font-weight: 700;
-  line-height: 1.25;
+  line-height: 1.15;
   margin-bottom: 18px;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: -0.02em;
 }
+
 .faq-intro p {
   color: var(--text-gray);
-  font-size: 0.9rem;
-  margin-bottom: 25px;
+  font-size: 0.95rem;
+  margin-bottom: 30px;
+  line-height: 1.6;
 }
+
 .faq-accordion {
   flex: 1;
   min-width: 0;
@@ -865,50 +874,72 @@ header {
   flex-direction: column;
   gap: 12px;
 }
+
 .faq-item {
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid var(--border-color);
-  border-radius: 12px;
+  background: linear-gradient(
+    180deg,
+    #1c1c22 0%,
+    #111115 100%
+  ); /* Fundo escuro igual à imagem */
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 10px;
   overflow: hidden;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
 }
+
 .faq-item:hover {
-  background: rgba(255, 255, 255, 0.04);
+  background: linear-gradient(180deg, #22222a 0%, #15151a 100%);
+  border-color: rgba(255, 255, 255, 0.1);
 }
+
 .faq-item summary {
-  padding: 20px 25px;
+  padding: 22px 25px;
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 0.95rem;
+  font-family: "Montserrat", sans-serif;
+  color: #e4e4e7;
   cursor: pointer;
   display: flex;
   justify-content: space-between;
   align-items: center;
   list-style: none;
 }
+
 .faq-item summary::-webkit-details-marker {
   display: none;
 }
+
 .faq-item summary i {
-  color: var(--primary-blue);
+  color: var(--text-gray); /* Setinha cinza ao invés de azul */
   font-size: 1.2rem;
-  transition: transform 0.3s;
+  transition:
+    transform 0.3s,
+    color 0.3s;
   flex-shrink: 0;
   margin-left: 15px;
 }
+
+.faq-item:hover summary i {
+  color: #ffffff; /* Setinha fica branca ao passar o mouse */
+}
+
 .faq-item[open] summary i {
   transform: rotate(180deg);
+  color: var(--text-white);
 }
+
 .faq-content {
-  padding: 0 25px 20px;
+  padding: 0 25px 22px;
   color: var(--text-gray);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
+  line-height: 1.6;
 }
+
 .faq-content p {
-  border-top: 1px solid var(--border-color);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
   padding-top: 20px;
   margin-top: 5px;
 }
-
 /* --- CTA FINAL (banner azul) --- */
 .cta-banner {
   position: relative;
