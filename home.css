@@ -1145,6 +1145,118 @@ header {
   transform: translateY(0);
 }
 
+/* --- CARDS EM CARROSSEL NO MOBILE (SCROLL SNAP) --- */
+@media (max-width: 768px) {
+  /* =========================================
+     1. CARROSSEL: CUIDAMOS DE TUDO (OVERLAP)
+     ========================================= */
+  .features-overlap .grid-3 {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    padding-bottom: 20px; /* Espaço para a sombra/hover */
+
+    /* Ocultar barra de rolagem */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+  }
+
+  .features-overlap .grid-3::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+  }
+
+  .features-overlap .card-feature {
+    flex: 0 0 85%; /* Deixa a ponta do próximo card visível */
+    scroll-snap-align: center;
+
+    /* Reseta as rotações e espaçamentos do Desktop */
+    transform: none !important;
+    margin: 0 !important;
+    padding: 32px 16px !important;
+    border-radius: 22px;
+  }
+
+  .features-overlap .card-feature i {
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+  }
+
+  .features-overlap .card-feature h3 {
+    font-size: 0.75rem;
+    margin-bottom: 6px;
+    line-height: 1.25;
+  }
+
+  .features-overlap .card-feature p {
+    font-size: 0.62rem;
+    line-height: 1.35;
+  }
+
+  /* =========================================
+     2. CARROSSEL: NOSSO PRODUTO (BENTO GRID)
+     ========================================= */
+  .product-section .section-title {
+    font-size: 1.7rem;
+  }
+
+  .product-section .section-subtitle {
+    font-size: 0.85rem;
+  }
+
+  .bento-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    padding-bottom: 20px;
+
+    /* Ocultar barra de rolagem */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .bento-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Aplica o mesmo tamanho para todos os cards no mobile, ignorando as colunas duplas do desktop */
+  .card-bento-dark,
+  .card-bento-gradient,
+  .bento-span-1,
+  .bento-span-2 {
+    flex: 0 0 65%;
+    scroll-snap-align: center;
+    padding: 24px 20px !important;
+    border-radius: 14px;
+  }
+
+  .card-bento-dark i,
+  .card-bento-gradient i {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+  }
+
+  .card-bento-dark h3,
+  .card-bento-gradient h3 {
+    font-size: 0.72rem;
+    margin-bottom: 6px;
+    line-height: 1.25;
+  }
+
+  .card-bento-dark p,
+  .card-bento-gradient p {
+    font-size: 0.6rem;
+    line-height: 1.35;
+  }
+
+  /* Ajuste do botão inferior */
+  .cta-bottom .btn-large {
+    padding: 12px 24px;
+    font-size: 0.8rem;
+  }
+}
+
 /* Responsividade: ajustar tamanho e margem no mobile */
 @media (max-width: 768px) {
   .btn-back-to-top {
