@@ -1178,18 +1178,18 @@ header {
   }
 
   .features-overlap .card-feature i {
-    font-size: 1.4rem;
+    font-size: 14px;
     margin-bottom: 8px;
   }
 
   .features-overlap .card-feature h3 {
-    font-size: 0.75rem;
+    font-size: 14px;
     margin-bottom: 6px;
     line-height: 1.25;
   }
 
   .features-overlap .card-feature p {
-    font-size: 0.62rem;
+    font-size: 14px;
     line-height: 1.35;
   }
 
@@ -1197,11 +1197,11 @@ header {
      2. CARROSSEL: NOSSO PRODUTO (BENTO GRID)
      ========================================= */
   .product-section .section-title {
-    font-size: 1.7rem;
+    font-size: 14px;
   }
 
   .product-section .section-subtitle {
-    font-size: 0.85rem;
+    font-size: 14px;
   }
 
   .bento-grid {
@@ -1239,14 +1239,14 @@ header {
 
   .card-bento-dark h3,
   .card-bento-gradient h3 {
-    font-size: 0.72rem;
+    font-size: 18px;
     margin-bottom: 6px;
     line-height: 1.25;
   }
 
   .card-bento-dark p,
   .card-bento-gradient p {
-    font-size: 0.6rem;
+    font-size: 14px;
     line-height: 1.35;
   }
 
@@ -1365,13 +1365,13 @@ header {
   }
 
   .features-overlap .card-feature h3 {
-    font-size: 0.75rem;
+    font-size: 18px;
     margin-bottom: 6px;
     line-height: 1.25;
   }
 
   .features-overlap .card-feature p {
-    font-size: 0.62rem;
+    font-size: 14px;
     line-height: 1.35;
   }
 
@@ -1402,20 +1402,20 @@ header {
 
   .card-bento-dark i,
   .card-bento-gradient i {
-    font-size: 1.2rem;
+    font-size: 32px;
     margin-bottom: 8px;
   }
 
   .card-bento-dark h3,
   .card-bento-gradient h3 {
-    font-size: 0.72rem;
+    font-size: 18px;
     margin-bottom: 6px;
     line-height: 1.25;
   }
 
   .card-bento-dark p,
   .card-bento-gradient p {
-    font-size: 0.6rem;
+    font-size: 14px;
     line-height: 1.35;
   }
 
